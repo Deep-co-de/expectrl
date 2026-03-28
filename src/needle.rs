@@ -35,8 +35,8 @@ impl Match {
     }
 }
 
-impl From<regex::bytes::Match<'_>> for Match {
-    fn from(m: regex::bytes::Match<'_>) -> Self {
+impl From<regex::Match<'_>> for Match {
+    fn from(m: regex::Match<'_>) -> Self {
         Self::new(m.start(), m.end())
     }
 }
